@@ -2,7 +2,7 @@
 
 ### Background (What is AMSI?)
 Over the last decade, powershell has proven to be a very accessible vector for pentesters and hackers alike to run malicious code in memory without writing to disk.
-This povided some stealth at first when used against many poorly built antivirus solutions, but things eventually changed *a bit*. 
+This provided some stealth at first when used against many poorly built antivirus solutions, but things eventually changed *a bit*. 
 Microsoft released a scan interface called [AMSI](https://docs.microsoft.com/en-us/windows/win32/amsi/how-amsi-helps) that allows any antivirus installed on the system to monitor and block powershell scripts in memory. 
 Below is an image of how a default Windows 10 installation blocks BloodHound's powershell ingestor in memory: 
 
