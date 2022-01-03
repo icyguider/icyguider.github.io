@@ -124,9 +124,9 @@ Below is a screenshot of us testing the newly created script, demonstrating how 
 
 [SweetPotato](https://github.com/CCob/SweetPotato) is a C# tool that allows for the escalation of privileges from a local service account to SYSTEM via multiple different methods. I have used it in the past during penetration tests to escalate privileges after obtaining access to the default IIS user of a windows server after uploading a ASPX web shell.
 
-SweetPotato is not currently listed in the official PowerSharpPack repo, and it does require arguments for it to be used correctly. In this part of the training, we will use it as an example to show how to convert a C# tool to PowerShell which requires arguments to be passed to it.
+SweetPotato is not currently listed in the official PowerSharpPack repo, and it does require arguments for it to be used correctly. In this part of the tutorial, we will use it as an example to show how to convert a C# tool to PowerShell which requires arguments to be passed to it.
 
-First, download the project from GitHub, make sure it’s Main method and class are set to "public", and compile it. Once compiled, convert it into a basic PowerShell script as demonstrated in the last two parts of this training. You should end up with something that looks like this:
+First, download the project from GitHub, make sure it’s Main method and class are set to "public", and compile it. Once compiled, convert it into a basic PowerShell script as demonstrated in the last two parts of this tutorial. You should end up with something that looks like this:
 
 ![alt text](https://i.imgur.com/N5VU5On.png)
 
@@ -214,7 +214,7 @@ Note that we utilized the +++ identifier that we setup earlier to tell the progr
 
 While converting C# tools to PowerShell manually provides for a lot of customization and fine tuning, it can sometimes be a bit time consuming. Luckily, there is an automated tool that can do most of the work for us. [PowerShellArmoury](https://github.com/cfalta/PowerShellArmoury) by [Cfalta](https://github.com/cfalta) is a project that focuses on building a single PowerShell file that contains all the scripts/tools that you may want to use during a penetration test. The project contains a PowerShell script called [ConvertTo-Powershell.ps1](https://github.com/cfalta/PowerShellArmoury/blob/master/ConvertTo-Powershell.ps1) that is capable of automatically converting C# programs into PowerShell with very minimal effort.
 
-To get started, download and import the script into memory. Running it is then as simple as supplying the -Path, -Namespace, -Class, and -Function parameter. The -Path parameter should be set to the compiled C# binary you wish to convert, and the other 3 parameters should be set to your program’s namespace, class, and Main method respectively. The Main method and its class of course must be set to "public", similarly to how it was done in all the other previous parts of this training. Below is an example of using this script to automatically generate a PowerShell version of SweetPotato:
+To get started, download and import the script into memory. Running it is then as simple as supplying the -Path, -Namespace, -Class, and -Function parameter. The -Path parameter should be set to the compiled C# binary you wish to convert, and the other 3 parameters should be set to your program’s namespace, class, and Main method respectively. The Main method and its class of course must be set to "public", similarly to how it was done in all the other previous parts of this tutorial. Below is an example of using this script to automatically generate a PowerShell version of SweetPotato:
 
 ```PowerShell
 iex (iwr https://raw.githubusercontent.com/cfalta/PowerShellArmoury/master/ConvertTo-Powershell.ps1)
