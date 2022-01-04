@@ -79,6 +79,8 @@ If we add this line, load our final script in memory, and invoke our newly creat
 
 ![alt text](https://i.imgur.com/v2bMqoD.png)
 
+**IMPORTANT UPDATE NOTE: If the program you are tyring to convert has any Environment.Exit() statements, they will need to be removed or patched to prevent the whole powershell process from being killed. Thanks to [S3cur3Th1sSh1t](https://twitter.com/ShitSecure/status/1478465374664462337) for bringing this to my attention!**
+
 ---
 ### Part 2: Real World Example (BetterSafetyKatz)
 
