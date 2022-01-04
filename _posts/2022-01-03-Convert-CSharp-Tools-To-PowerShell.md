@@ -98,7 +98,7 @@ Because we want non-admin users to be able to run the program, we will be making
 
 ![alt text](https://i.imgur.com/pXXkHdl.png)
 
-At this point our first modification is complete, and we can focus on our second modification which will change the source of the Mimikatz download to something that’s much less likely to be blocked compared to GitHub. If we scroll down a bit, we will find the code that is responsible for the downloading of the Mimikatz and discover that the "latestPath" variable is what ultimately contains the direct URL for Mimikatz trunk file. 
+At this point our first modification is complete, and we can focus on our second modification which will change the source of the Mimikatz download to something that’s much less likely to be blocked compared to GitHub. If we scroll down a bit, we will find the code that is responsible for the downloading of Mimikatz and discover that the "latestPath" variable is what ultimately contains the direct URL for the Mimikatz trunk file. 
 
 ![alt text](https://i.imgur.com/LaUhTWQ.png)
 
@@ -106,7 +106,7 @@ We can comment out the block of code that gets the direct URL for the Mimikatz t
 
 ![alt text](https://i.imgur.com/5kwkeo5.png)
 
-Now that we’ve made our two desired modifications to BetterSafetyKatz, we can now compile the program and convert it into a PowerShell script. This is done exactly the same as we did before by first encoding the file to a base64 blob and assigning the blob to a variable in a function. We then add a line to decode the blob and load the compiled file into memory. Finally, we add a line that will execute the loaded file by calling the program’s Main method with the correct class and namespace.
+Now that we’ve made our two desired modifications to BetterSafetyKatz, we can compile the program and convert it into a PowerShell script. This is done exactly the same as we did before by first encoding the file to a base64 blob and assigning the blob to a variable in a function. We then add a line to decode the blob and load the compiled file into memory. Finally, we add a line that will execute the loaded file by calling the program’s Main method with the correct class and namespace.
 
 The final PowerShell script will look like so:
 
@@ -146,7 +146,7 @@ Once that has been completed, we must pass the "$Commands" variable into the loa
 
 This was accomplished by using "+++" in place of spaces when supplying the program an argument that contains spaces, so that our program keeps it all as one parameter. This is a bit hacky and probably a bit confusing, but hopefully the demonstration and code comments can help you understand. See the below code that was added after the line which loads our program into memory.
 
- **DISCLAIMER: There is probably a MUCH better way to do this. Please feel free to implement a better solution. I couldn't find anything online so this is what I came up with.** 
+ **DISCLAIMER: There is probably a MUCH better way to do this. Please feel free to implement a better solution.** 
 
 ```PowerShell
 $Commands2 = $Commands.Split(" ") # Split the supplied parameters which are separated by a space
