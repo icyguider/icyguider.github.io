@@ -1,4 +1,4 @@
-## No-Fix Local Privilege Escalation Using KrbRelay & Shadow Credentials
+## No-Fix Local Privilege Escalation Using KrbRelay With Shadow Credentials
 
 ### Background (Inspiration, Overview, & WHY???)
 Because who doesn't want a SYSTEM shell? Thanks to [Cube0x0](https://twitter.com/cube0x0), pentesters have been blessed with a tool called [KrbRelay](https://github.com/cube0x0/KrbRelay) that enables the exploitation of a No-Fix LPE via relaying Kerberos authentication. See below for the pre-requisites necessary for this guide:
@@ -43,6 +43,7 @@ The first step in this process is to add a shadow credential to our local machin
 ```
 <details>
   <summary>See Screenshot</summary>
+
   
 ![krbrelay screenshot](https://i.imgur.com/acnlvYN.png)
 </details>
@@ -56,6 +57,7 @@ Once we have a certificate for our shadow credential, we can use it with Rubeus 
 <details>
   <summary>See Screenshot</summary>
   
+  
 ![Rubeus request machine account ticket via PKINIT](https://i.imgur.com/s6Mb5ls.png)
 </details>
 
@@ -67,7 +69,8 @@ The next part of the process is to use the ticket we obtained in the previous st
 ```
 <details>
   <summary>See Screenshot</summary>
-  
+ 
+ 
 ![Rubeus S4U2Self Request & Service Ticket Import](https://i.imgur.com/jPR02GW.png)
 </details>
 
@@ -82,6 +85,7 @@ klist
 
 <details>
   <summary>See Screenshot</summary>
+
   
 ![Spawn System Shell via SCMUACBypass](https://i.imgur.com/sIeeaWG.png)
 </details>
@@ -102,6 +106,7 @@ The shadow credential can then be removed like so:
 ```
 <details>
   <summary>See Screenshot</summary>
+
   
 ![Spawn System Shell via SCMUACBypass](https://i.imgur.com/ZImr4wC.png)
 </details>
