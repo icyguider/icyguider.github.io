@@ -44,8 +44,7 @@ The first step in this process is to add a shadow credential to our local machin
 <details>
   <summary>See Screenshot</summary>
 
-  
-![krbrelay screenshot](https://i.imgur.com/acnlvYN.png)
+<img alt="Adding a Shadow Credential Using KrbRelay" src="https://i.imgur.com/acnlvYN.png"/>
 </details>
 
 ---
@@ -57,8 +56,7 @@ Once we have a certificate for our shadow credential, we can use it with Rubeus 
 <details>
   <summary>See Screenshot</summary>
   
-  
-![Rubeus request machine account ticket via PKINIT](https://i.imgur.com/s6Mb5ls.png)
+<img alt="Rubeus Request Machine Account Ticket via PKINIT" src="https://i.imgur.com/s6Mb5ls.png"/>
 </details>
 
 ---
@@ -70,8 +68,7 @@ The next part of the process is to use the ticket we obtained in the previous st
 <details>
   <summary>See Screenshot</summary>
  
- 
-![Rubeus S4U2Self Request & Service Ticket Import](https://i.imgur.com/jPR02GW.png)
+<img alt="Rubeus S4U2Self Request and Service Ticket Import" src="https://i.imgur.com/jPR02GW.png"/>
 </details>
 
 ---
@@ -86,8 +83,7 @@ klist
 <details>
   <summary>See Screenshot</summary>
 
-  
-![Spawn System Shell via SCMUACBypass](https://i.imgur.com/sIeeaWG.png)
+<img alt="Spawn System Shell via SCMUACBypass" src="https://i.imgur.com/sIeeaWG.png"/>
 </details>
 
 ---
@@ -107,14 +103,13 @@ The shadow credential can then be removed like so:
 <details>
   <summary>See Screenshot</summary>
 
-  
-![Spawn System Shell via SCMUACBypass](https://i.imgur.com/ZImr4wC.png)
+<img alt="Clean up SCMUACBypass and Shadow Credential" src="https://i.imgur.com/ZImr4wC.png"/>
 </details>
 
 ---
 ### Part 6: The End!
 
-This concludes the blog post! Please feel free to reach out to me if you have any questions or feedback. Also, I've made a quick video demonstrating this process on a fully up-to-date Windows 10 PC with Defender enabled, so definitely check that out if you're interested!: https://www.youtube.com/watch?v=TDZwx9LERFw
+This concludes the blog post! Please feel free to reach out to me if you have any questions or feedback. Also, I've made a quick video demonstrating this process on a fully up-to-date Windows 10 PC with Defender enabled, so definitely check that out if you're interested!: [https://www.youtube.com/watch?v=TDZwx9LERFw](https://www.youtube.com/watch?v=TDZwx9LERFw)
 
 Big thanks to the people below for their amazing work on this topic!
 
